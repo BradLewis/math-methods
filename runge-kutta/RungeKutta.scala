@@ -5,14 +5,14 @@ object RungeKutta {
 
     def rungeKutta(f_ty: (Double, Double) => Double,
                     y0: Double,
-                    stepsize: Double) {
+                    stepsize: Double): Double = {
         
     }
 
     def getNext(f_ty: (Double, Double) => Double, 
                     yn: Double, 
                     tn: Double,
-                    stepsize: Double): Double {
+                    stepsize: Double): Double = {
         var h = stepsize
         var k1 = h * f_ty(tn, yn)
         var k2 = h * f_ty(tn + h / 2, yn + k1 / 2)
